@@ -1,0 +1,20 @@
+// Variables
+
+$font1: "Libre Baskerville", "Times New Roman", Helvetica, Arial, sans-serif;
+$font2: "Raleway", Helvetica, Arial, sans-serif;
+$logoColor: #e61f20;
+$white: #fff;
+$txtColorMain: #333;
+$txtColorSub: #6c757d;
+
+// Mixins
+
+@mixin fontBody {
+    font-family: $font1;
+}
+
+@mixin grid($columnsValue, $gapValue) {
+    display: grid;
+    grid-template-columns: $columnsValue;
+    gap: $gapValue;
+}

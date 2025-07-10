@@ -1,0 +1,104 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  box-sizing: border-box;
+  margin: 50px 0;
+}
+.header__title-container {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}
+.header__title-container h1 {
+  width: 100%;
+}
+
+.main {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.artwork {
+  box-sizing: border-box;
+}
+.artwork__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 50px;
+  max-width: 1400px;
+  margin: 3rem auto 7rem auto;
+}
+
+.footer {
+  display: block;
+  margin: 5rem 0 0 0;
+}
+.footer__info {
+  margin: 0 0 -2rem 0;
+}
+.footer__text {
+  margin: 40px 20px;
+}
+
+body {
+  font-family: "Libre Baskerville", "Times New Roman", Helvetica, Arial, sans-serif;
+}
+
+.header__title-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.header__title-container span {
+  display: inline-block;
+  background-color: #e61f20;
+  color: #fff;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  padding: 14px 14px;
+  font-weight: 200;
+}
+
+.artwork__link {
+  text-decoration: none;
+}
+.artwork__card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.artwork__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.artwork__text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.artwork__title {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.artwork__text {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.footer__text {
+  font-size: 0.8rem;
+}
+
+/*# sourceMappingURL=main.css.map */
