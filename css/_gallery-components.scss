@@ -1,1 +1,44 @@
 @use "util";
+
+.header--secondary {
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.15);
+
+    .header__title-container {
+        h1 {
+            font-size: 2rem;
+            a {
+                text-decoration: none;
+                color: util.$black;
+            }
+        }
+
+        span {
+            color: util.$black;
+            background-color: util.$white;
+            padding: 14px 14px 4px 8px;
+            border: 2px solid util.$black;
+        }
+    }
+}
+
+.gallery {
+    &__img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        font-family: util.$font2;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__artist {
+        font-family: util.$font2;
+    }
+
+    &__description {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+}

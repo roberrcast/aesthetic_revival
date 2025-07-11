@@ -1,1 +1,31 @@
 @use "util";
+
+.header {
+    &--secondary {
+        @include util.headerSizing(border-box, 25px 0, 33px 0);
+
+        .header__title-container {
+            margin: 0 25px;
+
+            h1 {
+                text-align: start;
+            }
+        }
+    }
+}
+
+.gallery {
+    margin: 100px 0;
+
+    &__img-container {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    &__info {
+        @include util.bodySizing(900px, 2rem auto 3rem auto);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -2,7 +2,7 @@
 @forward "gallery-components";
 
 body {
-    @include util.fontBody;
+    @include util.fontBody(util.$txtColorMain);
 }
 
 .header {
@@ -54,8 +54,8 @@ body {
     }
 
     &__title {
+        color: util.$txtColorMain; // El color aquí es porque no alcanzaba con el body
         font-family: util.$font2;
-        color: util.$txtColorMain;
         font-weight: 700;
         font-size: 1.1rem;
     }

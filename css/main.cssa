@@ -12,6 +12,9 @@
 
 .gallery {
   margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .gallery__img-container {
   width: 40%;
@@ -20,9 +23,6 @@
 .gallery__info {
   max-width: 900px;
   margin: 2rem auto 3rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 
 body {
@@ -81,10 +81,6 @@ body {
 .header--secondary .header__title-container h1 {
   font-size: 2rem;
 }
-.header--secondary .header__title-container h1 a {
-  text-decoration: none;
-  color: #000;
-}
 .header--secondary .header__title-container span {
   color: #000;
   background-color: #fff;
@@ -101,17 +97,9 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.gallery__artist {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-}
-.gallery__description {
-  line-height: 1.5rem;
-  font-size: 0.9rem;
-}
 
 body {
   font-family: "Libre Baskerville", "Times New Roman", Helvetica, Arial, sans-serif;
-  color: #333;
 }
 
 .header__title-container h1 {
@@ -150,8 +138,8 @@ body {
   gap: 5px;
 }
 .artwork__title {
-  color: #333;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: #333;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -165,4 +153,4 @@ body {
   font-size: 0.8rem;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.cssa.map */
