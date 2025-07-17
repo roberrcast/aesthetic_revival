@@ -6,7 +6,7 @@ const createArtwork = (artwork, iiif_url) => {
 
     const galleryLink = document.createElement("a");
     galleryLink.classList.add("artwork__link");
-    galleryLink.href = "gallery-focus.html";
+    galleryLink.href = `gallery-focus.html?id=${artwork.id}`;
 
     const image = document.createElement("img");
     image.classList.add("artwork__img");
@@ -41,7 +41,7 @@ const populateGrid = async () => {
             {
                 params: {
                     "query[term][is_public_domain]": true,
-                    fields: "id,title,artist_display,description,is_public_domain,image_id",
+                    fields: "id,title,date_display,artist_display,description,is_public_domain,image_id",
                     limit: 20,
                 },
             },
