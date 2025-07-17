@@ -47,10 +47,9 @@ body {
     }
 
     &__text-container {
-        flex-grow: 1;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     }
 
     &__title {
@@ -58,12 +57,17 @@ body {
         font-family: util.$font2;
         font-weight: 700;
         font-size: 1.1rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
     }
 
     &__text {
         color: util.$txtColorSub;
         font-size: 0.9rem;
         font-style: italic;
+        line-height: 1.2rem;
     }
 }
 
