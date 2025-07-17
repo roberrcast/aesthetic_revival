@@ -54,7 +54,7 @@ body {
     }
 
     &__title {
-        color: util.$txtColorMain; // El color aquí es porque no alcanzaba con el body
+        color: util.$txtColorMain; // El color aquí es porque no alcanzaba con el body porque esta encerrado en un <a>
         font-family: util.$font2;
         font-weight: 700;
         font-size: 1.1rem;
@@ -69,6 +69,7 @@ body {
 
 .footer {
     &__text {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-align: center;
     }
 }
