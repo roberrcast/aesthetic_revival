@@ -42,6 +42,7 @@
             referrerpolicy="no-referrer"
         />
         <link href="css/main.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <header class="header">
@@ -52,61 +53,7 @@
 
         <main class="main">
             <article class="artwork">
-                <section class="artwork__grid">
-                    <div class="artwork__card">
-                        <a class="artwork__link" href="gallery-focus.html">
-                            <img
-                                src="img/test-img.jpg"
-                                alt="test-img"
-                                class="artwork__img"
-                            />
-
-                            <div class="artwork__text-container">
-                                <h3 class="artwork__title">
-                                    Paris Street; Rainy Day, 1877
-                                </h3>
-
-                                <p class="artwork__text">Gustav Caillebotte</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="artwork__card">
-                        <a class="artwork__link" href="gallery-focus.html">
-                            <img
-                                src="img/test-img.jpg"
-                                alt="test-img"
-                                class="artwork__img"
-                            />
-
-                            <div class="artwork__text-container">
-                                <h3 class="artwork__title">
-                                    Paris Street; Rainy Day, 1877
-                                </h3>
-
-                                <p class="artwork__text">Gustav Caillebotte</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="artwork__card">
-                        <a class="artwork__link" href="gallery-focus.html">
-                            <img
-                                src="img/test-img.jpg"
-                                alt="test-img"
-                                class="artwork__img"
-                            />
-
-                            <div class="artwork__text-container">
-                                <h3 class="artwork__title">
-                                    Paris Street; Rainy Day, 1877
-                                </h3>
-
-                                <p class="artwork__text">Gustav Caillebotte</p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
+                <section id="artwork-grid" class="artwork__grid"></section>
             </article>
         </main>
 
@@ -119,5 +66,7 @@
                 </p>
             </article>
         </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

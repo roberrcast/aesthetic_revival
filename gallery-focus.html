@@ -41,12 +41,40 @@
             referrerpolicy="no-referrer"
         />
         <link href="css/main.css" rel="stylesheet" />
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
-        <header class="header">
+        <header class="header--secondary">
             <div class="header__title-container">
-                <h1 class="header__title"><span>Æsthetic</span> Revival</h1>
+                <h1 class="header__title">
+                    <a class="header__link" href="index.html"
+                        ><span>Æsthetic</span> Revival</a
+                    >
+                </h1>
             </div>
         </header>
+
+        <main class="gallery">
+            <article class="gallery__focus">
+                <section class="gallery__display">
+                    <div class="gallery__img-container">
+                        <img src="" alt="" class="gallery__img" />
+                    </div>
+                </section>
+
+                <section class="gallery__info">
+                    <h1 class="gallery__title"></h1>
+
+                    <p class="gallery__date-display"></p>
+
+                    <p class="gallery__artist"></p>
+
+                    <p class="gallery__description"></p>
+                </section>
+            </article>
+        </main>
+
+        <script src="js/gallery.js"></script>
     </body>
 </html>

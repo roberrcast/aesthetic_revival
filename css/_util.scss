@@ -6,15 +6,34 @@ $logoColor: #e61f20;
 $white: #fff;
 $txtColorMain: #333;
 $txtColorSub: #6c757d;
+$galleryBg: #f3f3f3;
+$black: #000;
 
 // Mixins
 
-@mixin fontBody {
+@mixin fontBody($color) {
     font-family: $font1;
+    color: $color;
 }
 
 @mixin grid($columnsValue, $gapValue) {
     display: grid;
     grid-template-columns: $columnsValue;
     gap: $gapValue;
+}
+
+@mixin sizing($width, $margin) {
+    max-width: $width;
+    margin: $margin;
+}
+
+@mixin headerSizing($box, $margin, $padd) {
+    box-sizing: $box;
+    margin: $margin;
+    padding: $padd;
+}
+
+@mixin bodySizing($width, $margin) {
+    max-width: $width;
+    margin: $margin;
 }

@@ -12,6 +12,9 @@
 
 .gallery {
   margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .gallery__img-container {
   width: 40%;
@@ -20,9 +23,6 @@
 .gallery__info {
   max-width: 900px;
   margin: 2rem auto 3rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 
 body {
@@ -81,10 +81,6 @@ body {
 .header--secondary .header__title-container h1 {
   font-size: 2rem;
 }
-.header--secondary .header__title-container h1 a {
-  text-decoration: none;
-  color: #000;
-}
 .header--secondary .header__title-container span {
   color: #000;
   background-color: #fff;
@@ -101,18 +97,9 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.gallery__artist {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-}
-.gallery__description {
-  line-height: 2rem;
-  font-size: 0.9rem;
-  text-align: justify;
-}
 
 body {
   font-family: "Libre Baskerville", "Times New Roman", Helvetica, Arial, sans-serif;
-  color: #333;
 }
 
 .header__title-container h1 {
@@ -145,30 +132,25 @@ body {
   object-fit: contain;
 }
 .artwork__text-container {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .artwork__title {
-  color: #333;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: #333;
   font-weight: 700;
   font-size: 1.1rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 .artwork__text {
   color: #6c757d;
   font-size: 0.9rem;
   font-style: italic;
-  line-height: 1.2rem;
 }
 
 .footer__text {
-  font-size: 0.7rem;
-  text-align: center;
+  font-size: 0.8rem;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.cssa.map */

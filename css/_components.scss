@@ -2,7 +2,7 @@
 @forward "gallery-components";
 
 body {
-    @include util.fontBody;
+    @include util.fontBody(util.$txtColorMain);
 }
 
 .header {
@@ -47,28 +47,33 @@ body {
     }
 
     &__text-container {
-        flex-grow: 1;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     }
 
     &__title {
+        color: util.$txtColorMain; // El color aquí es porque no alcanzaba con el body porque esta encerrado en un <a>
         font-family: util.$font2;
-        color: util.$txtColorMain;
         font-weight: 700;
         font-size: 1.1rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
     }
 
     &__text {
         color: util.$txtColorSub;
         font-size: 0.9rem;
         font-style: italic;
+        line-height: 1.2rem;
     }
 }
 
 .footer {
     &__text {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        text-align: center;
     }
 }
