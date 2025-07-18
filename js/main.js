@@ -41,7 +41,7 @@ const populateGrid = async () => {
             {
                 params: {
                     "query[term][is_public_domain]": true,
-                    fields: "id,title,date_display,artist_display,description,is_public_domain,image_id",
+                    fields: "id,title,artist_display,image_id",
                     limit: 20,
                 },
             },
