@@ -1,0 +1,23 @@
+@use "sass:math";
+
+@function fluid(
+    $min-size,
+    $max-size,
+    $min-breakpoint,
+    $max-breakpoint,
+    $unit: vw
+) {
+    $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+
+    $slope-to-unit: $slope * 100;
+
+    $intercept: $min-size - $slope * $min-breakpoint;
+
+    @return clamp(
+        #{$min-size},
+        #{$slope-to-unit}#{$unit} + #{$intercept},
+        #{$max-size}
+    );
+}
+
+// https://www.smashingmagazine.com/2022/10/fluid-typography-clamp-sass-functions/

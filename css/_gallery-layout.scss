@@ -1,4 +1,6 @@
 @use "util";
+@use "queries";
+@use "fluid-typography";
 
 .header {
     &--secondary {
@@ -18,7 +20,8 @@
     margin: 100px 0;
 
     &__img-container {
-        width: 40%;
+        width: fluid-typography.fluid(18rem, 35rem, 20rem, 87.5rem);
+        max-width: 90%;
         margin: 0 auto;
     }
 
@@ -27,5 +30,10 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include queries.respond("920px") {
+            max-width: none;
+            margin: 0 1rem;
+        }
     }
 }

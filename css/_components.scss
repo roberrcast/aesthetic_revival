@@ -1,4 +1,6 @@
 @use "util";
+@use "fluid-typography";
+@use "queries";
 @forward "gallery-components";
 
 body {
@@ -9,7 +11,7 @@ body {
     &__title-container {
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: fluid-typography.fluid(1.5rem, 2.5rem, 20rem, 87.5rem);
             font-weight: 600;
             //transform: skewX(-5deg);
         }
@@ -56,7 +58,7 @@ body {
         color: util.$txtColorMain; // El color aquí es porque no alcanzaba con el body porque esta encerrado en un <a>
         font-family: util.$font2;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: fluid-typography.fluid(0.8rem, 1.1rem, 20rem, 87.5rem);
         overflow: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -65,7 +67,7 @@ body {
 
     &__text {
         color: util.$txtColorSub;
-        font-size: 0.9rem;
+        font-size: fluid-typography.fluid(0.72rem, 0.9rem, 20rem, 87.5rem);
         font-style: italic;
         line-height: 1.2rem;
     }
@@ -73,7 +75,7 @@ body {
 
 .footer {
     &__text {
-        font-size: 0.7rem;
+        font-size: fluid-typography.fluid(0.6rem, 0.7rem, 20rem, 87.5rem);
         text-align: center;
     }
 }

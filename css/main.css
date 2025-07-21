@@ -14,7 +14,8 @@
   margin: 100px 0;
 }
 .gallery__img-container {
-  width: 40%;
+  width: clamp(18rem, 25.1851851852vw + 12.962962963rem, 35rem);
+  max-width: 90%;
   margin: 0 auto;
 }
 .gallery__info {
@@ -23,6 +24,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media (max-width: 920px) {
+  .gallery__info {
+    max-width: none;
+    margin: 0 1rem;
+  }
 }
 
 body {
@@ -39,8 +46,6 @@ body {
 }
 .header__title-container {
   display: block;
-  width: 40%;
-  margin: 0 auto;
 }
 .header__title-container h1 {
   width: 100%;
@@ -63,6 +68,23 @@ body {
   max-width: 1400px;
   margin: 3rem auto 7rem auto;
 }
+@media (max-width: 1400px) {
+  .artwork__grid {
+    max-width: none;
+  }
+}
+@media (max-width: 1290px) {
+  .artwork__grid {
+    max-width: none;
+    padding-left: clamp(1.5rem, 0.7407407407vw + 1.3518518519rem, 2rem);
+    padding-right: clamp(1.5rem, 0.7407407407vw + 1.3518518519rem, 2rem);
+  }
+}
+@media (max-width: 562px) {
+  .artwork__grid {
+    gap: 100px;
+  }
+}
 
 .footer {
   display: block;
@@ -79,7 +101,7 @@ body {
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.15);
 }
 .header--secondary .header__title-container h1 {
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 1.037037037vw + 1.0925925926rem, 2rem);
 }
 .header--secondary .header__title-container h1 a {
   text-decoration: none;
@@ -98,16 +120,25 @@ body {
 }
 .gallery__title {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 0.4444444444vw + 1.1111111111rem, 1.5rem);
   font-weight: 600;
   line-height: 1.8rem;
 }
+@media (max-width: 920px) {
+  .gallery__title {
+    margin-top: 1.5rem;
+  }
+}
+.gallery__date-display {
+  font-size: clamp(0.85rem, 0.2222222222vw + 0.8055555556rem, 1rem);
+}
 .gallery__artist {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: clamp(0.9rem, 0.1481481481vw + 0.8703703704rem, 1rem);
 }
 .gallery__description {
   line-height: 2rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 0.2222222222vw + 0.7055555556rem, 0.9rem);
   text-align: justify;
 }
 .gallery__description :nth-child(2) {
@@ -116,6 +147,7 @@ body {
 .gallery__description p a {
   text-decoration: none;
   font-size: 1rem;
+  font-size: clamp(0.8rem, 0.2962962963vw + 0.7407407407rem, 1rem);
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   color: #333;
   font-weight: 600;
@@ -128,7 +160,7 @@ body {
 
 .header__title-container h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 1.4814814815vw + 1.2037037037rem, 2.5rem);
   font-weight: 600;
 }
 .header__title-container span {
@@ -164,7 +196,7 @@ body {
   color: #333;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 0.4444444444vw + 0.7111111111rem, 1.1rem);
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -172,13 +204,13 @@ body {
 }
 .artwork__text {
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: clamp(0.72rem, 0.2666666667vw + 0.6666666667rem, 0.9rem);
   font-style: italic;
   line-height: 1.2rem;
 }
 
 .footer__text {
-  font-size: 0.7rem;
+  font-size: clamp(0.6rem, 0.1481481481vw + 0.5703703704rem, 0.7rem);
   text-align: center;
 }
 
