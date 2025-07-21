@@ -1,4 +1,6 @@
 @use "util";
+@use "queries";
+@use "fluid-typography";
 @forward "gallery-layout";
 
 body {
@@ -13,8 +15,6 @@ body {
 
     &__title-container {
         display: block;
-        width: 40%;
-        margin: 0 auto;
 
         h1 {
             width: 100%;
@@ -38,6 +38,20 @@ body {
             50px
         );
         @include util.bodySizing(1400px, 3rem auto 7rem auto);
+
+        @include queries.respond("1400px") {
+            max-width: none;
+        }
+
+        @include queries.respond("1290px") {
+            max-width: none;
+            padding-left: fluid-typography.fluid(1.5rem, 2rem, 20rem, 87.5rem);
+            padding-right: fluid-typography.fluid(1.5rem, 2rem, 20rem, 87.5rem);
+        }
+
+        @include queries.respond("562px") {
+            gap: 100px;
+        }
     }
 }
 

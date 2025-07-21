@@ -1,11 +1,14 @@
 @use "util";
+@use "fluid-typography";
+@use "queries";
 
 .header--secondary {
     box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.15);
 
     .header__title-container {
         h1 {
-            font-size: 2rem;
+            font-size: fluid-typography.fluid(1.3rem, 2rem, 20rem, 87.5rem);
+
             a {
                 text-decoration: none;
                 color: util.$black;
@@ -29,18 +32,27 @@
 
     &__title {
         font-family: util.$font2;
-        font-size: 1.5rem;
+        font-size: fluid-typography.fluid(1.2rem, 1.5rem, 20rem, 87.5rem);
         font-weight: 600;
         line-height: 1.8rem;
+
+        @include queries.respond("920px") {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__date-display {
+        font-size: fluid-typography.fluid(0.85rem, 1rem, 20rem, 87.5rem);
     }
 
     &__artist {
         font-family: util.$font2;
+        font-size: fluid-typography.fluid(0.9rem, 1rem, 20rem, 87.5rem);
     }
 
     &__description {
         line-height: 2rem;
-        font-size: 0.9rem;
+        font-size: fluid-typography.fluid(0.75rem, 0.9rem, 20rem, 87.5rem);
         text-align: justify;
 
         :nth-child(2) {
@@ -51,6 +63,7 @@
             a {
                 text-decoration: none;
                 font-size: 1rem;
+                font-size: fluid-typography.fluid(0.8rem, 1rem, 20rem, 87.5rem);
                 font-family: util.$font2;
                 color: util.$txtColorMain;
                 font-weight: 600;
